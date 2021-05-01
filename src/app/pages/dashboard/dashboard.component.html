@@ -1,0 +1,220 @@
+<!-- Start Wrapper  -->
+
+<div class="wrapper">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+  <!-- Start Dashboard  -->
+  <div id="main" class="main-toggle">
+    <div class="page-heading">
+      <h1>Dashboard</h1>
+      <button mat-button [matMenuTriggerFor]="menuSettings">
+        <img src="../../../assets/images/setting-black.svg" alt="setting" />
+      </button>
+      <mat-menu #menuSettings="matMenu" class="user-menu">
+        <button mat-menu-item>
+          <span>Menu 1</span>
+        </button>
+        <button mat-menu-item>
+          <span>Menu 2</span>
+        </button>
+        <button mat-menu-item>
+          <span>Menu 3</span>
+        </button>
+      </mat-menu>
+    </div>
+
+    <div class="row admin-content">
+      <div class="col-xl col-lg-4 col-sm-6">
+        <div class="content-box visitors">
+          <h1>7564</h1>
+          <h3>Visitors</h3>
+          <img src="../../../assets/images/card-analysis.svg" alt="visitors" />
+        </div>
+      </div>
+      <div class="col-xl col-lg-4 col-sm-6">
+        <div class="content-box page-view">
+          <h1>85,496</h1>
+          <h3>Page Views</h3>
+          <img src="../../../assets/images/card-analysis.svg" alt="visitors" />
+        </div>
+      </div>
+      <div class="col-xl col-lg-4 col-sm-6">
+        <div class="content-box new-registration">
+          <h1>745</h1>
+          <h3>New Registrations</h3>
+          <img src="../../../assets/images/card-analysis.svg" alt="visitors" />
+        </div>
+      </div>
+      <div class="col-xl col-lg-6 col-sm-6">
+        <div class="content-box bounce-rate">
+          <h1>60</h1>
+          <h3>Bounce Rate</h3>
+          <img src="../../../assets/images/card-analysis.svg" alt="visitors" />
+        </div>
+      </div>
+      <div class="col-xl col-lg-6 col-sm-12">
+        <div class="content-box visits">
+          <h1>1256</h1>
+          <h3>Visits</h3>
+          <img src="../../../assets/images/card-analysis.svg" alt="visitors" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row stats-row">
+          <div class="col-xl-6 col-md-6 col-sm-6">
+            <div class="sales-stats">
+              <div class="sales-color">
+                <img src="./assets/images/percentage.svg" alt="Percentage" />
+              </div>
+              <span>Sales</span>
+              <h3>$35,587</h3>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6 col-sm-6">
+            <div class="sales-stats">
+              <div class="profit-color">
+                <img src="./assets/images/growth.svg" alt="Profit" />
+              </div>
+              <span>Profit</span>
+              <h3>$35,587</h3>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6 col-sm-6">
+            <div class="sales-stats">
+              <div class="products-color">
+                <img src="./assets/images/new-product.svg" alt="Products" />
+              </div>
+              <span>New Products</span>
+              <h3>$35,587</h3>
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-6 col-sm-6">
+            <div class="sales-stats">
+              <div class="users-color">
+                <img src="./assets/images/card-user.svg" alt="Users" />
+              </div>
+              <span>New Users</span>
+              <h3>$35,587</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="sales-graph">
+          <div class="graph-heading">
+            <h3>Graph</h3>
+            <button mat-button [matMenuTriggerFor]="menu">
+              <img src="../../../assets/images/card-more.svg" alt="More Icon" />
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Menu 1</button>
+              <button mat-menu-item>Menu 2</button>
+              <button mat-menu-item>Menu 3</button>
+            </mat-menu>
+          </div>
+          <img
+            src="../../../assets/images/graph.jpg"
+            alt="Graph"
+            class="graph-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row table-content">
+      <div class="col-xl-3">
+        <mat-card class="progress-card">
+          <h3>Goals</h3>
+          <div class="progress-bar">
+            <p class="progress-text">Completed Purchase</p>
+            <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+          </div>
+          <div class="progress-bar">
+            <p class="progress-text">New Clients</p>
+            <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+          </div>
+          <div class="progress-bar">
+            <p class="progress-text">New Subscribers</p>
+            <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+          </div>
+          <div class="progress-bar">
+            <p class="progress-text">Site visits from ADS banners</p>
+            <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+          </div>
+          <div class="progress-bar">
+            <p class="progress-text">Positive feedback</p>
+            <mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+          </div>
+        </mat-card>
+      </div>
+      <div class="col-xl-9 col-12">
+        <mat-card class="table-card">
+          <h3>Table</h3>
+          <div class="stats-table">
+            <table mat-table [dataSource]="dataSource">
+              <ng-container matColumnDef="places">
+                <th mat-header-cell *matHeaderCellDef>Marketplaces</th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.places }}
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef>Date</th>
+                <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="payouts">
+                <th mat-header-cell *matHeaderCellDef>Payouts</th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.payouts }}
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef>Status</th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-button class="{{ element.classBtn }}">
+                    {{ element.status }}
+                  </button>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef>Action</th>
+                <td mat-cell *matCellDef="let element">
+                  <button mat-button class="edit-button" title="Edit">
+                    <img src="../../../assets/images/edit.svg" alt="edit" />
+                  </button>
+                  <button mat-button class="bin-button" title="Bin">
+                    <img src="../../../assets/images/bin.svg" alt="bin" />
+                  </button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+
+            <mat-paginator
+              class="paginator"
+              [length]="100"
+              [pageSize]="5"
+              showFirstLastButtons
+              [pageSizeOptions]="[5, 10, 25]"
+            >
+            </mat-paginator>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
+  </div>
+  <!-- End Dashboard  -->
+</div>
+<!-- End Wrapper  -->

@@ -1,0 +1,45 @@
+<!-- Start Main  -->
+<main class="main-content">
+  <div class="login-background"></div>
+
+  <div class="login-right">
+    <div class="login-header">
+      <a href="#" title="Logo">
+        <img src="../../assets/images/name-logo-horizontal.svg" alt="Logo" />
+      </a>
+    </div>
+
+    <div class="login-form">
+      <h3>Login</h3>
+      <form>
+        <mat-form-field class="form-textfield">
+          <mat-label>Username</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <mat-form-field class="form-textfield">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" />
+        </mat-form-field>
+      </form>
+
+      <div class="login-middle">
+        <button
+          type="submit"
+          mat-raised-button
+          routerLink="/dashboard"
+          title="Login"
+        >
+          Login
+        </button>
+
+        <a href="#" title="Forgot Password">Forgot Password?</a>
+      </div>
+
+      <div class="signup-account">
+        Don't have an account?
+        <a href="#" title="Sign Up"> Sign Up </a>
+      </div>
+    </div>
+  </div>
+</main>
+<!--  End Main  -->

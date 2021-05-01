@@ -1,0 +1,112 @@
+<div class="navbar">
+  <div class="toolbar-left">
+    <button mat-button class="toggle-nav" (click)="toggleNav()">
+      <img src="../../../assets/images/menu.svg" alt="Menu" />
+    </button>
+    <a routerLink="/dashboard" title="Logo" class="menu-logo">
+      <img
+        src="../../../assets/images/name-logo-verticle.svg"
+        alt="VerticalLogo"
+        class="vertical-logo"
+      />
+      <img
+        src="../../../assets/images/logo.svg"
+        class="horizontal-logo"
+        alt="HorizontalLogo"
+      />
+    </a>
+  </div>
+
+  <div class="toolbar-right">
+    <button
+      mat-button
+      title="Notification"
+      class="notification-logo"
+      [matMenuTriggerFor]="menu"
+    >
+      <img src="../../../assets/images/notification.svg" alt="notification" />
+    </button>
+    <mat-menu #menu="matMenu" class="notifications">
+      <div class="notification-heading">Notifications</div>
+      <button mat-menu-item class="notification-dropdown">
+        <img src="../../../assets/images/user-1.jpg" alt="user-profile" />
+        <div class="notification-content">
+          <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+          <span>Oct 3, 2017 9:00 PM</span>
+        </div>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item class="notification-dropdown">
+        <img src="../../../assets/images/user-2.jpg" alt="user-profile" />
+        <div class="notification-content">
+          <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+          <span>Oct 3, 2017 9:00 PM</span>
+        </div>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item class="notification-dropdown">
+        <img src="../../../assets/images/user-3.jpg" alt="user-profile" />
+        <div class="notification-content">
+          <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+          <span>Oct 3, 2017 9:00 PM</span>
+        </div>
+      </button>
+      <mat-divider></mat-divider>
+
+      <button mat-menu-item class="notification-dropdown">
+        <img src="../../../assets/images/user-4.jpg" alt="user-profile" />
+        <div class="notification-content">
+          <h3>Suzzeth Bungaos tagged you and 18 others in a post</h3>
+          <span>Oct 3, 2017 9:00 PM</span>
+        </div>
+      </button>
+      <mat-divider></mat-divider>
+
+      <div class="view-all">
+        <button class="show-btn" mat-button title="Show All">
+          Show All
+          <img
+            src="../../../assets/images/down-aerrow-colored.svg"
+            alt="dropdown-icon"
+          />
+        </button>
+      </div>
+    </mat-menu>
+
+    <button
+      mat-button
+      title="User"
+      class="founder-logo"
+      [matMenuTriggerFor]="Menuaction"
+    >
+      <span class="founder-name"> John smith</span>
+      <img src="../../../assets/images/avatar.jpg" alt="avatar" />
+    </button>
+    <mat-menu #Menuaction="matMenu" class="user-notification">
+      <button mat-menu-item class="profile-name">
+        <img
+          src="../../../assets/images/user-profile-icon.png"
+          alt="user-profile"
+        />
+        <span>Profile</span>
+      </button>
+      <button mat-menu-item class="profile-name">
+        <img src="../../../assets/images/setting-icon.png" alt="user-profile" />
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item class="profile-name">
+        <img
+          src="../../../assets/images/change-password-icon.png"
+          alt="user-profile"
+        />
+        <span>Change Password</span>
+      </button>
+
+      <button mat-menu-item class="profile-name" routerLink="/">
+        <img src="../../../assets/images/logout-icon.png" alt="user-profile" />
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>
+<div id="overlay" class="display-block-toggle" (click)="toggleOverlay()"></div>
