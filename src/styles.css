@@ -162,17 +162,21 @@ button.founder-logo,button.notification-logo{min-width: auto;border-radius: 50px
 .graph-image {margin-bottom: 0 ;max-width: 100%;padding-top: 30px;}
 
 .table-content .mat-progress-bar-fill::after {background-color: #3bd57f;}
-.table-content .progress-card,.table-content .table-card{height: 100%;border-radius: 4px;box-shadow: 0 0 0 rgba(0,0,0,0.5);}
+.table-content .progress-card,.table-content .table-card{padding: 16px;height: 100%;border-radius: 4px;box-shadow: 0 0 0 rgba(0,0,0,0.5);background-color: #fff;}
 .table-content .mat-progress-bar-buffer {background-color: #e9e9e9;}
 .table-content h3{font-size: 20px;color: #333333;}
+.table-card h3{padding: 0 0 2px;}
 .progress-bar{padding-bottom: 25px;}
 .progress-text{padding: 0 0 10px;font-size: 14px;color: #666666;}
 table {width: 100%;}
-th.mat-header-cell{font-size: 14px;}
-.stats-table th.mat-header-cell:first-of-type, .stats-table td.mat-cell:first-of-type,.stats-table td.mat-footer-cell:first-of-type {padding-left: 5px;}
+.stats-table{width: 100%;overflow: auto;}
+.stats-table .action-btn{display: flex;}
+.stats-table th.mat-header-cell{font-size: 14px;padding: 15px;}
+.stats-table th.mat-header-cell:first-of-type{padding-left: 5px;}
+.stats-table .mat-cell:first-of-type{padding-left: 8px;}
 .stats-table tr.mat-header-row {height: 34px;}
 .stats-table tr.mat-row,.stats-table tr.mat-footer-row {height: 49px;}
-.stats-table td.mat-cell{padding-top: 8px;}
+.stats-table td.mat-cell{padding:8px 15px 8px 15px;}
 button.edit-button,button.bin-button{min-width: auto;padding: 0 7px;border-radius: 50px;}
 .edit-button img , .bin-button img{height: 16px;}
 button.btn-active{background-color:rgba(49,196,114,0.14);color: #31c472;font-size: 13px;min-width: 75px;text-align: center;padding: 0 5px;line-height: 24px;text-overflow: ellipsis;}
@@ -234,6 +238,8 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 .notifications.mat-menu-panel{height: 300px;width: 299px;}
 .cdk-overlay-pane{right: 2px !important;}
 #main{padding-left: 15px;padding-right: 15px;}
+.paginator .mat-paginator-container {flex-direction: column;}
+.paginator .mat-paginator-range-label {display: contents;}
 }
 
 @media (max-width:375px) {
@@ -244,7 +250,7 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
 .notifications.mat-menu-panel{width: 270px;}
-.stats-table{width: 100%;overflow: auto;}
+
 }
 
 @media (max-width:320px) {
