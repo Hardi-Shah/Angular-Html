@@ -15,6 +15,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTableModule} from '@angular/material/table';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatTabsModule} from '@angular/material/tabs';
 import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { InnerpageComponent } from './pages/innerpage/innerpage.component';
@@ -46,7 +49,10 @@ import { FooterComponent } from './components/footer/footer.component';
     MatTableModule,
     MatDividerModule,
     MatPaginatorModule,
-    MatSelectModule
+    MatSelectModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatTabsModule
   ],
 
   providers: [Title],

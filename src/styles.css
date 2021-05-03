@@ -188,8 +188,41 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 --------------------------------------------------------------------------------------------------------*/
 .form-div{background-color: #fff;padding: 16px;margin-top: 20px;}
 .form-text h3{font-size: 26px;font-weight: bold; color:#35295C;padding: 0;margin-top: 25px;}
-.one-column-head{font-size: 20px;color: #000000;padding: 0;}
+.one-column-head{font-size: 20px;color: #000000;padding:0 0 10px;}
+.two-column-head{font-size: 20px;color: #000000;padding:10px 0 10px;}
+.element-head{font-size: 20px;color: #333333;padding:10px 0 0;}
+.tab-head{margin-bottom: -13px;font-size: 20px;color: #333333;padding:10px 0 0;}
 .form-div .form-row, .form-div .form-textfield{width: 100%;}
+.mat-form-field .mat-form-field-disabled .mat-form-field-underline {background-image: none !important;}
+.form-div .mat-form-field.mat-focused .mat-form-field-label{color: #35295C;}
+.form-div .mat-form-field.mat-focused .mat-form-field-label.focus-label,.form-div .mat-form-field-appearance-legacy .mat-form-field-label.focus-label{color: #000000;}
+.form-div .mat-form-field.mat-focused input.focus,.form-div .mat-form-field input.focus{color: rgba(0,0,0,0.3);}
+.form-div .mat-form-field.mat-focused input.input-focus,.form-div .mat-form-field input.input-focus{color: rgba(0,0,0,0.87);}
+.form-div .mat-form-field-appearance-legacy.mat-focused .mat-form-field-ripple{background-color: #35295b;}
+.mat-form-field-disabled.mat-form-field-appearance-legacy .mat-form-field-underline {height: 0px;}
+.file-upload .one-column-label{color: #444444;font-size: 14px;}
+.file-upload {display: flex;padding-top: 12px;}
+.file-upload .file {display: none;}
+.file-upload > label > img {padding-right: 9px;}
+.upload-white-icon{height: 15px;}
+.file-upload > label{margin: -13px 0 8px 18px;font-size: 14px;cursor: pointer;background-color: #35295b;color: #fff;height: 48px;width: 106px;display: flex;justify-content: center;align-items: center;border-radius: 4px;}
+.checkbox-head h3{color: #444444;font-size: 18px;font-weight: 500;padding: 0;}
+.custom-checkbox .mat-checkbox ~ .mat-checkbox{margin-left: 30px;}
+.custom-checkbox .mat-checkbox-checked.mat-accent .mat-checkbox-background,.custom-radio .mat-radio-button.mat-accent .mat-radio-inner-circle{background-color: #35295b;}
+.custom-radio .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{border-color: #35295b;}
+.custom-checkbox .mat-ripple.mat-checkbox-ripple .mat-ripple-element,.custom-radio .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element{background-color: #fff;}
+.custom-checkbox .mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, .mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {background: #fff;}
+.custom-checkbox .mat-checkbox-label{font-size: 14px;color: #444444;}
+.mat-radio-button ~ .mat-radio-button {margin-left: 20px;}
+.button-elements{display: flex;padding-top: 12px;}
+.mat-button.primary-btn:hover{color: #fff;border-color:#5d6dca;background-color: #303f9f;box-shadow: none !important;}
+.mat-button.primary-btn{border-radius: 4px;margin-right: 14px;text-transform: uppercase;font-size: 16px;background-color: #35295b;color: #fff;height: 48px;width: 106px;}
+.mat-button.secondary-btn:hover {background-color: #b6b6b6;border-color: #b6b6b6;color: #212529;}
+.mat-button.secondary-btn{margin-right: 14px;width: 131px;text-transform: uppercase;font-size: 16px;background-color: #e3e3e3;color: #444444;height: 48px;border-radius: 4px;}
+.tabs .mat-tab-label-content{font-size: 16px;color: #919191;}
+.tabs .mat-tab-label-active{color: #444444;}
+.tabs .mat-tab-body-content p{font-size: 14px;color: #444444;padding: 24px 0;}
+.tabs .mat-tab-label-container .mat-ink-bar {background-color: #35295b;width: 102px !important;margin-left:30px;height: 3px;}
 
 /* Footer
 --------------------------------------------------------------------------------------------------------*/
@@ -248,6 +281,10 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 .horizontal-logo{height: 35px;}
 .paginator .mat-paginator-container {flex-direction: column;}
 .paginator .mat-paginator-range-label {display: contents;}
+
+/* InnerPage
+--------------------------------------------------------------------------------------------------------*/
+.tabs .mat-tab-label-container .mat-ink-bar {margin-left: 0;}
 }
 
 @media (max-width:375px) {
@@ -255,6 +292,10 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 --------------------------------------------------------------------------------------------------------*/
 .login-right {padding: 50px 25px;}
 
+/* InnerPage
+--------------------------------------------------------------------------------------------------------*/
+.custom-checkbox .mat-checkbox ~ .mat-checkbox{margin-left: auto;display: block;margin-top: 15px;}
+.mat-radio-button ~ .mat-radio-button {margin-left: auto;display: block;margin-top: 15px;}
 }
 
 @media (max-width:320px) {
