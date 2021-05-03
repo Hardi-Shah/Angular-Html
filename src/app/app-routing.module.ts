@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { InnerpageComponent } from './pages/innerpage/innerpage.component';
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
@@ -16,6 +17,13 @@ const routes: Routes = [
     component:DashboardComponent,
     data: {
       title: 'Dashboard | Theme'
+    }
+  },
+  {
+    path:'innerpage',
+    component:InnerpageComponent,
+    data: {
+      title: 'InnerPage | Theme'
     }
   }
 ];

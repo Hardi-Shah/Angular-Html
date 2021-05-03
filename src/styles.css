@@ -129,7 +129,6 @@ button.founder-logo,button.notification-logo{min-width: auto;border-radius: 50px
 .page-heading .mat-button{border-radius: 100px; padding: 3px 10px; min-width: auto;}
 .page-heading img{height: 24px;}
 .content-box{padding: 36px 30px 30px 30px; border-radius: 4px;height: 100%;white-space: nowrap;}
-.content-box:hover{ box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.1);}
 .content-box h1{font-size: 34px;line-height: 34px; color: #ffffff; font-weight: bold;padding: 0;}
 .content-box h3{padding:10px 0 0; padding-bottom:32px;font-size: 16px; color: #ffffff;}
 .content-box img{height: 32px; margin-left:auto;display: block; margin-right: 0;}
@@ -187,7 +186,10 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 
 /* InnerPage
 --------------------------------------------------------------------------------------------------------*/
-
+.form-div{background-color: #fff;padding: 16px;margin-top: 20px;}
+.form-text h3{font-size: 26px;font-weight: bold; color:#35295C;padding: 0;margin-top: 25px;}
+.one-column-head{font-size: 20px;color: #000000;padding: 0;}
+.form-div .form-row, .form-div .form-textfield{width: 100%;}
 
 /* Footer
 --------------------------------------------------------------------------------------------------------*/
