@@ -56,9 +56,6 @@ option:not(:checked) { color: black; }
 .logo { display: inline-block; }
 .logo>img { display: block; }
 
-/* MainNavigation
---------------------------------------------------------------------------------------------------------*/
-
 /* Login
 --------------------------------------------------------------------------------------------------------*/
 .main-content{display: flex;min-height: 100vh;align-items: center;padding: 28px 0;}
@@ -72,9 +69,9 @@ option:not(:checked) { color: black; }
 .login-form .mat-form-field-appearance-legacy .mat-form-field-label{color:rgba(255,255,255,0.5);font-size: 16px;}
 .login-form input.mat-input-element{color: #fff;}
 .login-form .MuiFormControl-root .MuiFormLabel-root.mat-focused{color:rgba(255,255,255,0.5);}
-.mat-form-field .mat-form-field-underline{border-bottom: 1px solid rgba(255,255,255,0.5);background-color:none;}
+.login-form .mat-form-field .mat-form-field-underline{border-bottom: 1px solid rgba(255,255,255,0.5);background-color:none;}
 .login-form .mat-form-field{margin-bottom: 11px;}
-.mat-form-field.mat-focused .mat-form-field-ripple {border-bottom: 2px solid rgba(255,255,255,0.5);background-color: rgba(255,255,255,0.5) !important;}
+.login-form .mat-form-field.mat-focused .mat-form-field-ripple {border-bottom: 2px solid rgba(255,255,255,0.5);background-color: rgba(255,255,255,0.5) !important;}
 .login-middle{display: flex;align-items: center;justify-content: space-between;}
 .login-middle a {color: #fff;font-size: 14px;}
 .login-middle a:hover {color: #ced4da;}
@@ -86,22 +83,24 @@ option:not(:checked) { color: black; }
 --------------------------------------------------------------------------------------------------------*/
 .navbar{color: white;height: 87px;margin-left: auto;box-shadow: 0 -2px 8px rgba(0,0,0,0.03);background: #35295b;display: flex;align-items: center;justify-content: space-between;position: fixed;top: 0;left: 0;right: 0;z-index: 1030;}
 .vertical-logo{height: 55px;padding: 2px 16px;}
-.notification-logo img{height: 20px;}
+.notification-logo img{height: 20px;width: 20px;display: block;margin: 0 auto;}
+.notification-logo .mat-button-wrapper{display: block;}
 .horizontal-logo{height: 40px;display: none;}
-.founder-logo img{height: 48px;border-radius: 100%;}
+.founder-logo img{height: 48px;border-radius: 100%;width: 48px;margin: 0 auto;}
 button.founder-logo,button.notification-logo{min-width: auto;border-radius: 50px;}
 .founder-name{font-size: 14px;padding-right: 11px;}
-.toolbar-right .founder-logo{padding: 5px 30px;}
+.toolbar-right{display: flex;}
+.toolbar-right .founder-logo{padding: 5px 20px;}
 .toolbar-left{display: flex;}
 .toolbar-left .toggle-nav{display: none;}
-.notifications.mat-menu-panel{max-width: 357px;top: 19.5px;position: relative;} 
-.notification-dropdown.mat-menu-item{height: 100%;line-height: normal;display: inline-flex;padding: 14px;} 
+.notifications.mat-menu-panel{top: 7.5px;position: relative;} 
+.notification-dropdown.mat-menu-item{height: 100%;line-height: normal;display: flex;padding: 10px;} 
 .notification-dropdown img{height: 57px;border-radius: 100%;}
 .notification-heading{background-color: #F3F6FF;color:#0057A1;font-size: 13px;font-weight: bold;text-transform: uppercase;padding: 10px 10px 10px 20px;}
-.notification-content{padding: 10px 2px 0 12px;}
-.notification-dropdown .notification-content h3{font-size: 13px;font-weight: 600;color: #666666;padding: 0 0 12px;line-height: normal;}
+.notification-content{padding: 8px 2px 0 12px;white-space: normal;}
+.notification-dropdown .notification-content h3{font-size: 13px;font-weight: 600;color: #666666;padding: 0 0 8px;line-height: normal;}
 .notification-dropdown .notification-content span{font-size: 12px;color: #A2A2A2;}
-.notifications .view-all{text-align: center;font-size: 13px;color: #A2A2A2;padding: 5px 0;}
+.notifications .view-all{text-align: center;font-size: 13px;color: #A2A2A2;margin-top: 5px;}
 .view-all .show-btn{text-transform: capitalize;border-radius: 50px;min-width: auto;}
 .view-all img{position: relative;left: 4px;height: 15px;}
 .user-notification.mat-menu-panel{width: 188px;top: 15.5px;position: relative;}
@@ -116,17 +115,17 @@ button.founder-logo,button.notification-logo{min-width: auto;border-radius: 50px
 .sidebar-list li{border-bottom: 1px solid rgba(255,255,255,0.07);border-top: 1px solid rgba(255,255,255,0.07);}
 .sidebar-list ul li a{padding: 20px 0;display: block;}
 .sidebar-list ul li:hover,.sidebar-list ul li:focus,.sidebar-list li.active{background-color: #fb5561;}
-.sidenav {height: 100%;margin-top: 87px;width: 114px;position: fixed;z-index: 3;top: 0;left: 0;background-color: #34285c;transition: 0.5s;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);}
+.sidenav {height: 100%;overflow: auto;margin-top: 87px;width: 114px;position: fixed;z-index: 3;top: 0;left: 0;background-color: #34285c;transition: 0.5s;box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);}
 
-#main{margin-left: 114px;transition:all 0.5s;padding: 95px 30px 0 30px;background-color: #F0F0F2;height: 100%;}
+#main{margin-left: 114px;transition:all 0.5s;padding: 112px 30px 0 30px;background-color: #F0F0F2;height: 100%;}
 .toggle-nav .main-toggle { margin-left: 0px !important }
 .toggle-nav .sidenav-toggle{left: -114px;}
 .toggle-nav .display-block-toggle { display: block !important; }
 
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
-.page-heading{display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px;}
-.page-heading h1{font-size: 26px;font-weight: bold; color:#35295C;padding: 15px; }
+.page-heading{display: flex; justify-content: space-between; align-items: center;padding-bottom: 10px;}
+.page-heading h1{font-size: 26px;font-weight: bold; color:#35295C;padding: 0;}
 .page-heading .mat-button{border-radius: 100px; padding: 3px 10px; min-width: auto;}
 .page-heading img{height: 24px;}
 .content-box{padding: 36px 30px 30px 30px; border-radius: 4px;height: 100%;white-space: nowrap;}
@@ -147,16 +146,16 @@ button.founder-logo,button.notification-logo{min-width: auto;border-radius: 50px
 .sales-stats{display: flex;flex-direction: column;align-items: center;background-color: #fff;padding: 20px 0 30px 0;border-radius: 4px;height: 100%;}
 .sales-stats div{border-radius: 100%;padding: 23px 26px;}
 .sales-stats div img{height: 24px;width: 24px;}
-.sales-stats span{font-size: 14px;padding: 12px 0 16px 0;color: #666666;}
-.sales-stats h3{font-size:28px;font-weight: bold;color: #333333;padding-bottom: 0;}
+.sales-stats span{font-size: 14px;padding: 12px 0 8px;color: #666666;}
+.sales-stats h3{font-size:28px;font-weight: bold;color: #333333;padding: 0;line-height: 0.8em;}
 .sales-color{background-color: rgba(121,117,239,0.16);}
 .profit-color{background-color: rgba(255,133,191,0.16);}
 .products-color{background-color: rgba(59,213,127,0.16);}
 .users-color{background-color: rgba(247,147,0,0.16);}
 .graph-heading{display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px;}
 .graph-heading h3{ color:#333333;font-size: 20px;padding: 2px;line-height: 12px;}
-.graph-heading img{height:18px;display: inline-block;}
-.graph-heading .mat-button{padding: 5px;height: 40px;width: 40px; border-radius: 50px;min-width: auto;}
+.graph-heading img{height:18px;display:block;width: 18px;margin: 0 auto;}
+.graph-heading .mat-button{padding: 7px;border-radius: 50px;min-width: auto;}
 .sales-graph{padding: 20px;background-color: #fff; height: 100%; display: flex;flex-direction: column;border-radius: 4px;}
 .sales-graph img{max-width: 100%;}
 .graph-image {margin-bottom: 0 ;max-width: 100%;padding-top: 30px;}
@@ -177,12 +176,18 @@ table {width: 100%;}
 .stats-table tr.mat-header-row {height: 34px;}
 .stats-table tr.mat-row,.stats-table tr.mat-footer-row {height: 49px;}
 .stats-table td.mat-cell{padding:8px 15px 8px 15px;}
-button.edit-button,button.bin-button{min-width: auto;padding: 0 7px;border-radius: 50px;}
-.edit-button img , .bin-button img{height: 16px;}
+button.edit-button,button.bin-button{min-width: auto;padding:7px;border-radius: 50px;}
+.edit-button img , .bin-button img{height: 16px;width: 16px;display: block;margin: 0 auto;}
+button.edit-button .mat-button-wrapper,button.bin-button .mat-button-wrapper{display: block;}
 button.btn-active{background-color:rgba(49,196,114,0.14);color: #31c472;font-size: 13px;min-width: 75px;text-align: center;padding: 0 5px;line-height: 24px;text-overflow: ellipsis;}
 button.btn-pending{background-color: rgba(248,143,0,0.14);color: #f88600;font-size: 13px;min-width: 75px;text-align: center;padding: 0 5px;line-height: 24px;text-overflow: ellipsis;}
 button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-size: 13px;min-width: 75px;text-align: center;padding: 0 5px;line-height: 24px;text-overflow: ellipsis;}
 .paginator.mat-paginator{margin-bottom: -10px;}
+.paginator .mat-form-field.mat-focused .mat-form-field-ripple {background-color: #000000;}
+
+/* InnerPage
+--------------------------------------------------------------------------------------------------------*/
+
 
 /* Footer
 --------------------------------------------------------------------------------------------------------*/
@@ -235,9 +240,10 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 /* Dashboard
 --------------------------------------------------------------------------------------------------------*/
 .founder-logo .founder-name{display: none;}
-.notifications.mat-menu-panel{height: 300px;width: 299px;}
+.notifications.mat-menu-panel{height: 300px;}
 .cdk-overlay-pane{right: 2px !important;}
 #main{padding-left: 15px;padding-right: 15px;}
+.horizontal-logo{height: 35px;}
 .paginator .mat-paginator-container {flex-direction: column;}
 .paginator .mat-paginator-range-label {display: contents;}
 }
@@ -246,10 +252,6 @@ button.btn-declined{background-color: rgba(252,86,97,0.14);color: #fc5661;font-s
 /* Login
 --------------------------------------------------------------------------------------------------------*/
 .login-right {padding: 50px 25px;}
-
-/* Dashboard
---------------------------------------------------------------------------------------------------------*/
-.notifications.mat-menu-panel{width: 270px;}
 
 }
 
